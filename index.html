@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- ====== navbar left ========= -->
+        <div class="navbar-left">
+            <i class="fa-solid fa-bars icon hover show" style="color:
+            #fff;"></i>
+            <i class="fa-solid fa-house icon hover house" style="color: #fff;"></i>
+            <form class="navbar-search">
+                <i class="fas fa-search icon" style="color: #fff;"></i> 
+                <input type="text" placeholder="Find"/>
+            </form> 
+        </div>
+        
+        <!-- ====== navbar left ========= -->
+        <div class="navbar-right">
+            <i class="fa-regular fa-plus icon hover add-task-plus" style="color: #ffffff;"></i>
+
+            
+
+            <div class="navbar-list-icon hover" style="color: #ffffff;">
+                <i class="fa-regular fa-circle-three-quarters-stroke hover" style="color: #ffffff; font-size: 18px;"></i>
+                2/5
+            </div>
+            <i class="fa-regular fa-question-circle icon hover" style="color: #ffffff;"></i>
+            <i class="fa-regular fa-bell icon hover" style="color: #ffffff;"></i>
+            <i class="fa-regular fa-user-circle icon hover" style="color: #ffffff;"></i>
+        </div>
+    </nav>
+
+   
+    <div class="main">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <a class="title" href="#">
+                        <span>
+                            <i class="fa-solid fa-inbox"></i>
+                            Inbox
+                        </span>
+                        <span class="counter">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a class=" title" href="#">
+                        <span>
+                            <i class="fa-solid fa-calendar-week"></i>
+                            Today
+                        </span>
+                        <span class="counter">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="title" href="#">
+                        <span>
+                            <i class="fa-regular fa-calendars"></i>
+                            Upcoming
+                        </span>
+                        <span class="counter">0</span>
+                    </a>
+                </li>
+                <button class="accordion-history">
+                    <span>History</span>
+                    <i class="fa-regular fa-arrow-alt-circle-left arrow"></i>
+                </button>
+
+                <div class="accordion-detail">
+                    <a class="hover" href="#">
+                        <i class="fa-regular fa-rectangle-history-circle-plus "></i>
+                        Check Out
+                    </a>
+                </div>  
+            </ul>
+        </div>
+
+        <div class="main-todo-container">
+            <div class="todo-box ideas">
+                <div class="todo-box-title">
+                    <div>
+                        <span>Ideas</span>
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="list-box">🔤 </div>
+                <div>
+                    <button class="add-task btn-task">
+                        <i class="fa-solid
+                         fa-plus
+                         "></i> 
+                        <span> Add Task </span>
+                    </button>
+                </div>
+            </div>
+
+            
+
+            <div class="todo-box">
+                <div class="todo-box-title">
+                    <div>
+                        <span>To do</span>
+                        <i class="fa-solid fa-inbox"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="list-box">🔤 </div>
+                <div>
+                    <button class="add-task- btn-task">
+                        <i class="fa-solid 
+                         fa-plus 
+                         "></i> 
+                        <span> Add Task </span>
+                    </button>
+                </div>
+            </div>
+            <div class="todo-box">
+                <div class="todo-box-title">
+                    <div>
+                        <span>In progress</span>
+                        <i class="fa-solid fa-shoulder">🦾</i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="list-box">🔤 </div>
+                <div>
+                    <button class="add-task- btn-task">
+                        <i class="fa-solid
+                         fa-plus
+                         "></i> 
+                        <span> Add Task </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== Plus modal box ========= -->
+    <div class="modal-plus hidden">
+        <button class="close-btn">&times;</button>
+        <div class="">
+            <input type="text" class="task-title" placeholder="Task title"/>
+            <div class="">
+                <select name="catergory" id="category">
+                    <option value=""></option>
+                    <option value="Inbox">Inbox</option>
+                    <option value="Upcoming">Upcoming</option>
+                </select>
+                <input type="text" placeholder="Description" >
+            </div>
+            <button>Add Task </button>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
