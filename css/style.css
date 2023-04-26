@@ -96,7 +96,7 @@ i{
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-  
+  git
 /* Add Animation */
 @keyframes animatetop {
 from {top: -900px; opacity:0}
