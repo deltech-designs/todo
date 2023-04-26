@@ -10,36 +10,30 @@
 </head>
 <body>
     <nav class="navbar">
-        <!-- ====== navbar left ========= -->
         <div class="navbar-left">
-            <i class="fa-solid fa-bars icon hover show" style="color:
-            #fff;"></i>
-            <i class="fa-solid fa-house icon hover house" style="color: #fff;"></i>
-            <form class="navbar-search">
-                <i class="fas fa-search icon" style="color: #fff;"></i> 
-                <input type="text" placeholder="Find"/>
-            </form> 
-        </div>
-        
-        <!-- ====== navbar left ========= -->
-        <div class="navbar-right">
-            <i class="fa-regular fa-plus icon hover add-task-plus" style="color: #ffffff;"></i>
-
-            
-
-            <div class="navbar-list-icon hover" style="color: #ffffff;">
-                <i class="fa-regular fa-circle-three-quarters-stroke hover" style="color: #ffffff; font-size: 18px;"></i>
-                2/5
+            <div><i class="fa-solid fa-bars navbar-toggler navbar-icon hover "></i></div>
+            <div><i class="fa-solid fa-house navbar-toggler navbar-icon hover"></i></div>
+            <div> 
+                <form class="navbar-form">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Find">
+                </form>
             </div>
-            <i class="fa-regular fa-question-circle icon hover" style="color: #ffffff;"></i>
-            <i class="fa-regular fa-bell icon hover" style="color: #ffffff;"></i>
-            <i class="fa-regular fa-user-circle icon hover" style="color: #ffffff;"></i>
+        </div>
+        <div class="navbar-right">
+            <div><i class="fa-solid fa-plus navbar-icon hover plus-icon"></i></div>
+            <div class="navbar-icon hover" style="font-size: 18px;">
+                <i class="fa-solid fa-arrow-trend-up" style="padding-right: 12px;"></i>
+                <span>2/5</span>
+            </div>
+            <i class="fa-regular fa-question-circle navbar-icon hover"></i>
+            <i class="fa-regular fa-bell navbar-icon hover"></i>
+            <i class="fa-regular fa-user-circle navbar-icon hover"></i>
         </div>
     </nav>
 
-   
-    <div class="main">
 
+    <div class="main">
         <div class="side-nav">
             <ul>
                 <li>
@@ -150,24 +144,51 @@
         </div>
     </div>
 
-
-    <!-- ======== Plus modal box ========= -->
-    <div class="modal-plus hidden">
-        <button class="close-btn">&times;</button>
-        <div class="">
-            <input type="text" class="task-title" placeholder="Task title"/>
-            <div class="">
-                <select name="catergory" id="category">
-                    <option value=""></option>
-                    <option value="Inbox">Inbox</option>
+     <!-- ======== Plus modal box ========= -->
+     <div class="modal-plus hidden">
+        <div class="modal-plus-inner">
+            <div class="add-task-title">
+                <textarea class="plus-modal-input task-name"  placeholder="Task title"></textarea><br/>
+                <input class="plus-modal-input task-description" type="text" placeholder="Description" />
+            </div>
+            <!-- ======= Plus modal Button =============== -->
+            <div class="p-modal-btn">
+                <button class="plus-modal-btn">
+                    <i class="fa-solid fa-calendar"></i>
+                    Today
+                    <span class="today-cancel">&times;</span>
+                </button>
+                <button class="plus-modal-btn">
+                    <i class="fa-solid fa-flag"></i>
+                    Priority
+                </button>
+                <button class="plus-modal-btn">
+                    <i class="fa-solid fa-clock-four"></i>
+                    Reminder 
+                    <span class="pro">PRO</span>
+                </button>
+                <button class="plus-modal-btn">
+                    <i class="fa-solid fa-ellipsis-h"></i>
+                </button>
+            </div>
+            <hr />
+            <div class="plus-task">
+                <select name="" id="">
+                    <option value="Inbox">
+                        <i class="fa-solid
+                         fa-inbox"></i>
+                        Inbox
+                    </option>
                     <option value="Upcoming">Upcoming</option>
                 </select>
-                <input type="text" placeholder="Description" >
+                <div class="plus-modal-addbtn">
+                    <button class="modal-btn plus-modal-cancel">Cancel </button>
+                    <button class="modal-btn plus-modal-add">Add task </button>
+                </div>
             </div>
-            <button>Add Task </button>
         </div>
     </div>
-    <div class="overlay hidden"></div>
+    <!-- <div class="overlay hidden"></div> -->
 
     <script src="./script.js"></script>
 </body>
