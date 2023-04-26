@@ -26,21 +26,6 @@ const closeModal = function(ev){
 plusIcon.addEventListener('click', openModal);
 plusModalCancel.addEventListener('click', closeModal);
 
-// const openModal = document.querySelector('.'); 
-// const openModal = function(){
-//     // alert('Hello'); 
-//     plusModal.classList.remove('hidden'); 
-// }
-// plusModal.addEventListener('click', openModal ); 
-
-
-
-// const closeModal = function(){
-//     pl
-// }
-
-
-
 // const hiddenNav = document.querySelector('.side-nav'); 
 // // Navbar toggle 
 // const showNav = document.querySelector('.show').onclick = () =>{
