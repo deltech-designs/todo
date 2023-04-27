@@ -92,16 +92,15 @@ i{
     transition: all 0.5s;
     transition: all 0.5s;
     z-index: 10;
-
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-  git
+
 /* Add Animation */
 @keyframes animatetop {
-from {top: -900px; opacity:0}
-to {top:0; opacity:1}
-}
+    from {top: -900px; opacity:0}
+    to {top:0; opacity:1}
+    }
 
 
 .add-task-title{
@@ -199,13 +198,142 @@ select{
     gap: 2rem;
 }
 
+.main{
+    display: flex; 
+    gap: 3rem;
+    max-width: 100%;
+}
 
 .side-nav{
+    height: 88vh;
+    width: 30%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-gray);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side-nav ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 87vh;
-    background-color: var(--clr-gray);
+    gap: 1rem;
+    text-align: left;
+}
+
+li .title {
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--clr-black);
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+}
+
+li .title span i {
+    font-size: 14px;
+    /* color: red; */
+}
+
+li .title span i:even(2){
+    color: blue;
+}
+.title:hover{
+    background-color: var(--clr-grey);
+}
+
+.counter{
+    margin-right: 0;
+    text-align: right;
+}
+
+.accordion-history{
+    background-color: var(--clr-grey-100);
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    
+    cursor: pointer;
+    transition: all 0.5s;    
+}
+
+.accordion-detail{
+    font-size: 14px;
+    display: none;
+    transition: all 0.5s;
+}
+
+.accordion-detail a{
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+.accordion-detail-show{
+    transition: all 0.5s;
+    display: block;
+} 
+
+.sidenav-hidden{
+    width: 0%;
+    transition: all 0.5s;
+}
+
+.main-todo-container{
+    width: 100%; 
+    display: flex; 
+    gap: 2rem; 
+    padding: 2rem;
+}
+
+.todo-box{
+    width: 35%; 
+    height: 50vh;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: none;
+}
+
+.todo-box-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.todo-box-title div span{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.list-box{
+    margin: 1rem 0; 
+}
+
+.btn-task{
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: poniner; 
+}
+
+.btn-task i {
+    color: var(--clr-red);
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.btn-task span{
+    color: var(--clr-grey-100);
 }

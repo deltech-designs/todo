@@ -26,29 +26,19 @@ const closeModal = function(ev){
 plusIcon.addEventListener('click', openModal);
 plusModalCancel.addEventListener('click', closeModal);
 
-// const hiddenNav = document.querySelector('.side-nav'); 
+const hiddenNav = document.querySelector('.side-nav'); 
+
+
 // // Navbar toggle 
-// const showNav = document.querySelector('.show').onclick = () =>{
-//     hiddenNav.classList.toggle('hidden');
-// }
+const showNav = document.querySelector('.show-navbar').onclick = () =>{
+    hiddenNav.classList.toggle('sidenav-hidden');
+}
 
 
 // // Accordion checker 
-// const acc = document.querySelector('.accordion-history').addEventListener('click', () => {
-//     const accDetail = document.querySelector('.accordion-detail').classList.toggle('accordion-detail-show'); 
-//     const arrowDown = document.querySelector('.arrow').classList.toggle('fa-arrow-alt-circle-down');
-// }); 
-
-
-// const addPlus = document.querySelector('.add-task-plus').addEventListener('click', () => {
-//     alert('Hey'); 
-// }); 
-
-// // Add task modal box
-// const addTask = document.querySelectorAll('.add-task').forEach((item) => {
-//     item.addEventListener('click', () => {
-//         alert('alert'); 
-//     })
-// }); 
+const acc = document.querySelector('.accordion-history').addEventListener('click', () => {
+    const accDetail = document.querySelector('.accordion-detail').classList.toggle('accordion-detail-show'); 
+    const arrDown = document.querySelector('.arrow').classList.toggle('fa-angle-down')
+}); 
 
 
