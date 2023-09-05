@@ -1,5 +1,13 @@
-/* ============== Adjusting the size of task title input ============= */
+// Varibales
 
+const ModalBox = document.querySelector('.modal-plus'); 
+const openModalBox = document.querySelectorAll('.add-task');
+const cancelModalBox = document.querySelector('.cancel-task')
+
+const handBudger = document.querySelector('.handbudger'); 
+const sideNav = document.querySelector('.side-nav'); 
+
+/* ============== Adjusting the size of task title input ============= */
 const taskName = document.querySelector('.task-name'); 
 const adjustHeight = () => {
     taskName.style.height = 'auto'; 
@@ -7,17 +15,15 @@ const adjustHeight = () => {
 }
 taskName.addEventListener('input', adjustHeight);
 
-const plusModal = document.querySelector('.modal-plus'); 
-const plusIcon = document.querySelector('.plus-icon');
-const plusModalCancel = document.querySelector('.plus-modal-cancel')
-
-const openModal = function(ev){
+// Open the modal box 
+const openModa = function(ev){
     ev.preventDefault();
-    plusModal.classList.remove('hidden'); 
-    plusModal.style.transition = '0.5s'
+    openModal.classList.remove('hidden'); 
+    openModa.style.transition = '0.3s'
 }
 
 
+// Close the modal box 
 const closeModal = function(ev){
     ev.preventDefault();
     plusModal.classList.add('hidden'); 
@@ -25,6 +31,11 @@ const closeModal = function(ev){
 
 plusIcon.addEventListener('click', openModal);
 plusModalCancel.addEventListener('click', closeModal);
+
+// handBudger function
+handBudger.addEventListener('click', () => {
+  sideNav.classList.toggle('sideNav-active')
+});
 
 // const openModal = document.querySelector('.'); 
 // const openModal = function(){

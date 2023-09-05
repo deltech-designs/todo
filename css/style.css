@@ -4,9 +4,10 @@
     --clr-grey:rgba(247, 244, 244, 0.2); 
     --clr-gray: #d4d1d1;
     --clr-light-yellow: #faf5b7;
+    --clr-black: #000;
 }
 
-*{
+*, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -37,7 +38,6 @@ i{
     background-color: var(--clr-red);
     color: var(--clr-white); 
     padding: 1.5rem 3rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,36 +73,12 @@ i{
     align-items: center;
     gap: 1.5rem;
 }
-
-.plus-icon{
-    transition: all 0.5s;
-}
-
-.modal-plus{
-    background-color: var(--clr-white);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
-    width: 35%;
-    padding: 12px 1.2rem;
-    border-radius: 6px;
-
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s;
-    transition: all 0.5s;
-    z-index: 10;
-
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
   
 /* Add Animation */
 @keyframes animatetop {
-from {top: -900px; opacity:0}
-to {top:0; opacity:1}
+    from {top: -900px; opacity:0}
+    to {top:0; opacity:1}
 }
-
 
 .add-task-title{
     margin-bottom: 1rem;
@@ -164,7 +140,6 @@ to {top:0; opacity:1}
     align-items: center;
 }
 
-
 select{
     width: 25%;
     padding: 5px;
@@ -196,16 +171,124 @@ select{
 
 .main{
     display: flex;
+    /* justify-content: space-between; */
     gap: 2rem;
 }
 
-
 .side-nav{
-    display: flex;
-    flex-direction: column;
+    height: 88vh;
     width: 20%;
-    height: 87vh;
+    position: static;
+    /* z-index: 1; */
     background-color: var(--clr-gray);
-    position: relative;
-    
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 1rem;
+}
+
+.sideNav-active{
+   transition: all 0.5s;
+   width: 0%;
+   padding: 0rem;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.title{
+    color: var(--clr-black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.title span i{ 
+    font-size: 1.5em;
+}
+
+.title span span {
+    font-size: 1.5em;
+    margin-left: 0.5rem;
+}
+
+.counter{
+    font-size: 1.5em;
+}
+
+.main-todo-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+}
+
+.todo-box {
+    width: 100%;
+    /* border: 1px solid var(--clr-black); */
+    padding: 1rem;
+
+}
+
+.todo-box-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.box-title{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.box-title span{
+    font-size: 2em;
+}
+
+.box-title i {
+    font-size: 1.5em;
+}
+
+.list-box{
+    border: 1px solid var(--clr-black);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.btn-task{
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-inline: 1rem;
+    padding: 0.8rem 1rem;
+}
+
+
+.plus-icon{
+    transition: all 0.5s;
+}
+
+.modal-box{
+    background-color: var(--clr-white);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    width: 35%;
+    padding: 12px 1.2rem;
+    border-radius: 6px;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 10;
+
+    animation-name: animatetop;
+    animation-duration: 0.4s; 
 }
