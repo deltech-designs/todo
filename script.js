@@ -1,41 +1,60 @@
-// Varibales
 
-const ModalBox = document.querySelector('.modal-plus'); 
-const openModalBox = document.querySelectorAll('.add-task');
-const cancelModalBox = document.querySelector('.cancel-task')
+const taskName = document.querySelector('.task-title'); 
 
 const handBudger = document.querySelector('.handbudger'); 
 const sideNav = document.querySelector('.side-nav'); 
 
+const openModal = document.querySelectorAll('.btn-task'); 
+const modalBox = document.querySelector('.modal-box');
+const closeModal = document.querySelector('.close-modal-box'); 
+
+
+
 /* ============== Adjusting the size of task title input ============= */
-const taskName = document.querySelector('.task-name'); 
 const adjustHeight = () => {
     taskName.style.height = 'auto'; 
     taskName.style.height = taskName.scrollHeight + 'px'; 
 }
 taskName.addEventListener('input', adjustHeight);
 
+
+handBudger.addEventListener('click', () => {
+    sideNav.classList.toggle('sideNav-active')
+})
+
+
+openModal.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modalBox.classList.remove('hidden'); 
+    })
+}) 
+
+closeModal.addEventListener('click', () => {
+    modalBox.classList.add('hidden'); 
+})
+
+
 // Open the modal box 
-const openModa = function(ev){
-    ev.preventDefault();
-    openModal.classList.remove('hidden'); 
-    openModa.style.transition = '0.3s'
-}
+// const openModa = function(ev){
+//     ev.preventDefault();
+//     openModal.classList.remove('hidden'); 
+//     openModa.style.transition = '0.3s'
+// }
 
 
 // Close the modal box 
-const closeModal = function(ev){
-    ev.preventDefault();
-    plusModal.classList.add('hidden'); 
-}
+// const closeModal = function(ev){
+//     ev.preventDefault();
+//     plusModal.classList.add('hidden'); 
+// }
 
-plusIcon.addEventListener('click', openModal);
-plusModalCancel.addEventListener('click', closeModal);
+// plusIcon.addEventListener('click', openModal);
+// plusModalCancel.addEventListener('click', closeModal);
 
 // handBudger function
-handBudger.addEventListener('click', () => {
-  sideNav.classList.toggle('sideNav-active')
-});
+// handBudger.addEventListener('click', () => {
+//   sideNav.classList.toggle('sideNav-active')
+// });
 
 // const openModal = document.querySelector('.'); 
 // const openModal = function(){

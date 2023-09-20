@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-left">
-            <div><i class="fa-solid fa-bars handbudger navbar-icon hover "></i></div>
+            <div><i class="fa-solid fa-bars handbudger navbar-icon hover"></i></div>
             <div><i class="fa-solid fa-house navbar-toggler navbar-icon hover"></i></div>
             <div> 
                 <form class="navbar-form">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="navbar-right">
-            <div><i class="fa-solid fa-plus navbar-icon hover add-task"></i></div>
+            <div><i class="fa-solid fa-plus navbar-icon hover btn-task"></i></div>
             <div class="navbar-icon hover" style="font-size: 18px;">
                 <i class="fa-solid fa-arrow-trend-up" style="padding-right: 12px;"></i>
                 <span>2/5</span>
@@ -40,16 +40,16 @@
                     <a class="title" href="#">
                         <span>
                             <i class="fa-solid fa-inbox"></i>
-                            <span>Inbox</span>
+                            <span>To do</span>
                         </span>
                         <span class="counter">0</span>
                     </a>
                 </li>
                 <li>
-                    <a class=" title" href="#">
+                    <a class="title" href="#">
                         <span>
                             <i class="fa-solid fa-calendar-week"></i>
-                            <span>Today</span>
+                            <span>Doing</span>
                         </span>
                         <span class="counter">0</span>
                     </a>
@@ -58,7 +58,7 @@
                     <a class="title" href="#">
                         <span>
                             <i class="fa-regular fa-calendars"></i>
-                            <span>Upcoming</span>
+                            <span>Done</span>
                         </span>
                         <span class="counter">0</span>
                     </a>
@@ -70,8 +70,8 @@
             <div class="todo-box ideas">
                 <div class="todo-box-title">
                     <div class="box-title">
-                        <span>Ideas</span>
-                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Todo</span>
+                        <!-- <i class="fa-solid fa-lightbulb"></i> -->
                     </div>
                     <div>
                         <i class="fa-solid fa-ellipsis"></i>
@@ -92,8 +92,8 @@
             <div class="todo-box">
                 <div class="todo-box-title">
                     <div class="box-title">
-                        <span>To do</span>
-                        <i class="fa-solid fa-inbox"></i>
+                        <span>Doing</span>
+                        <!-- <i class="fa-solid fa-inbox"></i> -->
                     </div>
                     <div>
                         <i class="fa-solid fa-ellipsis"></i>
@@ -112,8 +112,8 @@
             <div class="todo-box">
                 <div class="todo-box-title">
                     <div class="box-title">
-                        <span>In progress</span>
-                        <i class="fa-solid fa-shoulder">🦾</i>
+                        <span>Done</span>
+                        <!-- <i class="fa-solid fa-shoulder">🦾</i> -->
                     </div>
                     <div>
                         <i class="fa-solid fa-ellipsis"></i>
@@ -131,44 +131,45 @@
     </div>
 
      <!-- ======== Plus modal box ========= -->
-     <div class="modal-box hidden">
+     <div class="modal-box ">
         <div class="modal-box-inner">
-            <div class="add-task-title">
-                <textarea class="modal-box-input task-name"  placeholder="Task title"></textarea><br/>
-                <input class="modal-box-input task-description" type="text" placeholder="Description" />
+            <div class="task-title">
+                <textarea class="task-input task-title"  placeholder="Task title"></textarea><br/>
+                <input class="task-input task-description" type="text" placeholder="Description" />
             </div>
             <!-- ======= Plus modal Button =============== -->
-            <div class="p-modal-btn">
-                <button class="plus-modal-btn">
+            <div class="container modal-btn">
+                <button class="modal-btn">
                     <i class="fa-solid fa-calendar"></i>
                     Today
                     <span class="today-cancel">&times;</span>
                 </button>
-                <button class="plus-modal-btn">
+                <button class="modal-btn">
                     <i class="fa-solid fa-flag"></i>
                     Priority
                 </button>
-                <button class="plus-modal-btn">
+                <button class="modal-btn">
                     <i class="fa-solid fa-clock-four"></i>
                     Reminder 
                     <span class="pro">PRO</span>
                 </button>
-                <button class="plus-modal-btn">
+                <button class="modal-btn">
                     <i class="fa-solid fa-ellipsis-h"></i>
                 </button>
             </div>
             <hr />
             <div class="">
                 <select name="" id="">
-                    <option value="Inbox">
+                    <option value="todo">
                         <i class="fa-solid fa-inbox"></i>
-                        Inbox
+                       To do 
                     </option>
-                    <option value="Upcoming">Upcoming</option>
+                    <option value="Doing">Doing</option>
+                    <option value="Done">Done</option>
                 </select>
-                <div class="plus-modal-addbtn">
-                    <button class="modal-btn cancel-task">Cancel </button>
-                    <button class="modal-btn plus-modal-add">Add task </button>
+                <div class="modal-addbtn">
+                    <button class="modal-btn close-modal-box">Cancel </button>
+                    <button class="modal-btn add-task">Add task </button>
                 </div>
             </div>
         </div>
