@@ -1,9 +1,37 @@
 @media screen and (max-width: 600px){
-    .side-nav{
+
+    .navbar{
         width: 100%;
-        position: fixed;
-        /* z-index: 1; */
+        padding: 0.8rem;
     }
 
-    
+    .fa-house, .navbar-form, .arrow-trend,
+   .fa-question-circle, .fa-bell, .fa-user-circle{
+        display: none !important;
+    }
+
+
+    .side-nav{
+        width: 0%;
+        position: fixed;
+        left: 0;
+        z-index: 1;
+        padding: 0rem;
+    }
+
+    .sideNav-active{
+        width: 100%;
+        height: 100vh;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .main-todo-container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .todo-box{
+        width: 100%;
+    }
 }
