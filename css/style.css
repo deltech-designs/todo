@@ -24,6 +24,11 @@ i{
     /* font-weight: 400; */
 }
 
+.btn{
+    outline: none;
+    border: none;
+}
+
 .icon{
     padding: 1rem;
     border-radius: 3px;
@@ -179,6 +184,10 @@ ul li {
     padding: 0.8rem 1rem;
 }
 
+.add-task-icon{
+    font-size: medium;
+}
+
 
 .plus-icon{
     transition: all 0.5s;
@@ -246,9 +255,18 @@ ul li {
     background-color: transparent;
     border: var(--clr-gray) solid 1px;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
-.plus-modal-btn i {
+.task-option{
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: var(--clr-gray) solid 1px;
+    border-radius: 5px;
+}
+
+.modal-btn i {
     font-size: 12px;
 }
 

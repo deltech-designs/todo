@@ -34,4 +34,17 @@
     .todo-box{
         width: 100%;
     }
+
+    .modal-box{
+        top: 60%;
+        width: 90%;
+    }
+
+    .task-option{
+        display: none;
+    }
+
+    .todo-category{
+        margin-top: 1rem;
+    }
 }
