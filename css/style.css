@@ -255,6 +255,10 @@ ul li {
     background-color: transparent;
     border: var(--clr-gray) solid 1px;
     border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.task-option-container{
     margin-bottom: 1rem;
 }
 
@@ -264,6 +268,18 @@ ul li {
     background-color: transparent;
     border: var(--clr-gray) solid 1px;
     border-radius: 5px;
+}
+
+
+#select-category{
+    height: 20%;
+}
+
+.task-category{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .modal-btn i {
