@@ -138,13 +138,15 @@ ul li {
     justify-content: space-between;
     gap: 2rem;
     width: 80%;
+    background-color: var(--clr-grey)
 }
 
 .todo-box {
     width: 100%;
+    height: auto;
     /* border: 1px solid var(--clr-black); */
     padding: 1rem;
-
+    
 }
 
 .todo-box-title{
@@ -171,8 +173,44 @@ ul li {
 .list-box{
     border: 1px solid var(--clr-black);
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    height: auto;
+    display: flex;
+    /* justify-content: ; */
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
 }
+
+.circle-checkbox{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.circle-checkbox:checked{
+    background-color: #007bff;
+    border: 2px solid #007bff;
+}
+
+/* .circle-checkbox::before{
+    position: absolute;
+    content: "";
+    background-color: var(--clr-grey);
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--clr-black);
+    border-radius: 50%;
+    top: 30%;
+    left: 20%;
+    transform: translate();
+} */
 
 .btn-task{
     background-color: var(--clr-red);
@@ -317,11 +355,15 @@ select{
     border-radius: 5px;
 }
 
-.plus-modal-cancel{
+.close-modal-box{
     background-color: var(--clr-gray);
 }
 
-.plus-modal-add{
+.add-task{
     background-color: var(--clr-red);
     color: var(--clr-white);
 }
+
+
+
+

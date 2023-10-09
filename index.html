@@ -57,6 +57,7 @@
                         <span class="counter">0</span>
                     </a>
                 </li>
+
                 <li>
                     <a class="title" href="#">
                         <span>
@@ -66,6 +67,7 @@
                         <span class="counter">0</span>
                     </a>
                 </li>
+
                 <li>
                     <a class="title" href="#">
                         <span>
@@ -79,61 +81,65 @@
         </div>
 
         <div class="main-todo-container">
-            <div class="todo-box ideas">
+
+            <!-- ======== Modal box ========= -->
+            <div class="todo-box">
                 <div class="todo-box-title">
                     <div class="box-title">
-                        <span>Todo</span>
-                        <!-- <i class="fa-solid fa-lightbulb"></i> -->
+                        <span>To do</span>
                     </div>
                     <div>
-                        <i class="icon fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-ellipsis"></i>
                     </div>
                 </div>
 
-                <div class="list-box ideas">🔤 </div>
+                <ul class="list-box to-do item-list-todo"> 
+                    
+                </ul>
                 <div>
-                    <button class="add-task btn-task">
+                    <button class="btn-task">
                         <i class="fa-solid fa-plus add-task-icon"></i> 
                         <span> Add Task </span>
                     </button>
                 </div>
             </div>
-
+                        
             
-
             <div class="todo-box">
                 <div class="todo-box-title">
                     <div class="box-title">
                         <span>Doing</span>
-                        <!-- <i class="fa-solid fa-inbox"></i> -->
                     </div>
                     <div>
                         <i class="fa-solid fa-ellipsis"></i>
                     </div>
                 </div>
-                <div class="list-box">🔤 </div>
+                <ul class="list-box item-list-doing">
+                    <div>
+                        
+                    </div>
+                </ul>
                 <div>
-                    <button class="add-task btn-task">
+                    <button class="btn-task">
                         <i class="fa-solid fa-plus add-task-icon"></i> 
                         <span> Add Task </span>
                     </button>
                 </div>
             </div>
 
-
+            <!-- ======== Modal box ========= -->
             <div class="todo-box">
                 <div class="todo-box-title">
                     <div class="box-title">
                         <span>Done</span>
-                        <!-- <i class="fa-solid fa-shoulder">🦾</i> -->
                     </div>
                     <div>
                         <i class="fa-solid fa-ellipsis"></i>
                     </div>
                 </div>
-                <div class="list-box">🔤 </div>
+                <div class="list-box done"></div>
                 <div>
-                    <button class="add-task btn-task">
+                    <button class="btn-task">
                         <i class="fa-solid fa-plus add-task-icon"></i> 
                         <span> Add Task </span>
                     </button>
@@ -143,13 +149,15 @@
     </div>
 
      <!-- ======== Modal box ========= -->
-     <div class="modal-box">
+     <div class="modal-box hidden">
         <div class="modal-box-inner">
-            <div class="task-title">
+             <!-- ======= Input for the task ======== -->
+            <div class="modal-input">
                 <textarea class="task-input task-title"  placeholder="Task title"></textarea><br/>
                 <input class="task-input task-description" type="text" placeholder="Description" />
             </div>
-            <!-- ======= Modal Button =============== -->
+
+            <!-- ======= Task Option =============== -->
             <div class="task-option-container">
                 <button class="btn task-option">
                     <i class="fa-solid fa-calendar"></i>
@@ -170,15 +178,17 @@
                 </button>
             </div>
             <hr />
+
+
+            <!-- ======= Select category will the task will fall into ======= -->
             <div class="task-category">
-                <select name="select-category" id="select-category  ">
-                    <option value="todo">
-                        <i class="fa-solid fa-inbox"></i>
-                       To do 
-                    </option>
-                    <option value="Doing">Doing</option>
-                    <option value="Done">Done</option>
+                <select name="select-category" id="select-category">
+                    <option value="todo"> To do </option>
+                    <option value="doing">Doing</option>
+                    <option value="done">Done</option>
                 </select>
+
+                <!-- ======= Modal Button ======= -->
                 <div class="modal-addbtn">
                     <button class="modal-btn close-modal-box">Cancel </button>
                     <button class="modal-btn add-task">Add task </button>
