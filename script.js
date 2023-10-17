@@ -41,6 +41,26 @@ closeModal.addEventListener('click', () => {
     modalBox.classList.add('hidden'); 
 })
 
+addTask.addEventListener("click", (ev) =>{
+    ev.preventDefault();
+    const task = document.getElementById("select-category").value;
+    const taskInput = document.querySelector(".task-title").value;
+    // console.log(addItemToList(taskInput)); 
+ 
+    if (task === "todo") {
+         storage.todo.push(taskInput)
+         document.querySelector(".task-title").value = "";
+    } 
+    else if(task === "doing") {
+        storage.doing.push(taskInput)
+        document.querySelector(".task-title").value = "";
+    }
+    
+    localStorage.setItem("task", JSON.stringify(storage));
+    addItemToList(); 
+ }); 
+
+
 const createListItem = function (text){
     const listItem = document.createElement("li"); 
     const label = document.createElement("label")
@@ -48,42 +68,38 @@ const createListItem = function (text){
     checkbox.setAttribute("type", "checkbox")
     checkbox.classList.add('circle-checkbox'); 
     label.appendChild(checkbox); 
-    label.appendChild(document.createTextNode(text))
-    listItem.appendChild(label)
+    label.appendChild(document.createTextNode(text));
+    listItem.appendChild(label); 
 }
 
-
-const addItemToList = function(text) {
+const addItemToList = function() {
     const getStoredObject = JSON.parse(localStorage.getItem("task")); 
-    const newItem = createListItem(text); 
-    console.log(newItem)
     const itemListTodo = document.querySelector(".item-list-todo"); 
-    const itemListDoing = document.querySelector(".item-list-doing")
+    const itemListDoing = document.querySelector(".item-list-doing"); 
+
+    // console.log(getStoredObject);
     
+    if(getStoredObject.todo){
+        // console.log(getStoredObject.todo); 
+        for (const key in getStoredObject.todo) { 
+            const item = getStoredObject.todo[key]; 
+            console.log(item); 
+            const listItem = createListItem(item); 
+            itemListTodo.innerHTML = listItem;  
+        }
+    }
+
+    else if (getStoredObject.doing){
+        for(const key in getStoredObject.doing){
+            const itemDoing = getStoredObject.doing[key]; 
+            console.log(itemDoing);
+            const listItem = createListItem(); 
+            itemListDoing.innerHTML = listItem; 
+        }
+    }
 }
 
-addTask.addEventListener("click", (ev) =>{
-   ev.preventDefault();
-   const task = document.getElementById("select-category").value;
-   const taskInput = document.querySelector(".task-title").value;
-   console.log(addItemToList(taskInput)); 
 
-   if (task === "todo") {
-        storage.todo.push(taskInput)
-        document.querySelector(".task-title").value = "";
-   } 
-   else if(task === "doing") {
-        storage.doing.push(taskInput)
-        document.querySelector(".task-title").value = "";
-   }
-   
-   else {
-        // storage.done.push(taskName.value)
-        // document.querySelector(".done").innerText = taskName.value; 
-        // document.querySelector(".task-title").value
-   }
-    localStorage.setItem("task", JSON.stringify(storage));
-}); 
 
 
 
