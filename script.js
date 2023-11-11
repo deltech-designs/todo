@@ -35,11 +35,15 @@ closeModal.addEventListener("click", () => {
   modalBox.classList.add("hidden");
 });
 
+window.onload = function () {
+  addItemToList();
+};
+
 // Create the element
 const createListItem = function (text) {
-  const newText = `<li>
-                        <input type="checkbox"  class="circle-checkbox"/>
-                        <label>${text}</label>
+  const newText = `<li class="list" draggable="true" ondragstart="drag(event)" id="drag1">
+                        <input type="checkbox"  class="circle-checkbox" />
+                        <label class="label">${text}</label>
                     </li>`;
   return newText;
 };
@@ -48,22 +52,22 @@ const createListItem = function (text) {
 addTask.addEventListener("click", (ev) => {
   ev.preventDefault();
 
-  // modalBox.style.display = "none"; 
-
-  const task = document.getElementById("select-category").value;
   const taskInput = document.querySelector(".task-title").value;
+  const task = document.getElementById("select-category");
 
+  taskInput.innerHTML = "";
 
-  taskInput.innerHTML = ""
 
   if (taskInput === "") {
     alert("Please add task");
-  } else if (task === "todo") {
+  } else if (task.value === "todo") {
     const store = storage.todo.push(taskInput);
     document.querySelector(".task-title").value = "";
-  } else if (task === "doing") {
+    task.selectedIndex = 0; 
+  } else if (task.value === "doing") {
     const store = storage.doing.push(taskInput);
     document.querySelector(".task-title").value = "";
+    task.selectedIndex = 0; 
   }
 
   localStorage.setItem("task", JSON.stringify(storage));
@@ -96,3 +100,18 @@ const addItemToList = function () {
     });
   }
 };
+
+
+function allowDrop(ev){
+  ev.preventDefault(); 
+}
+
+function drag(ev){
+  ev.dataTransfer.setData('text', ev.target.id)
+}
+
+function drop(ev){
+  ev.preventDefault(); 
+  let data = ev.dataTransfer.getData('text'); 
+  ev.target.appendChild(document.getElementById(data))
+}
